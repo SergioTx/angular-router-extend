@@ -1,0 +1,10 @@
+<nav>
+  <button routerLink="/villain-list">Villain</button>
+  <button routerLink="/heroes-list" [queryParams]="{ debug: true }">
+    Heroes
+  </button>
+  <button (click)="onClickVillain()">Villain no hist</button>
+  <button (click)="onClickHero()">Heroes no hist</button>
+</nav>
+<div>here {{ route.snapshot.queryParams | json }}</div>
+<router-outlet></router-outlet>
